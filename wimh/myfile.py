@@ -40,15 +40,7 @@ def scan_file_directory(path):
             scan_file_directory(entry.path)
         if entry.is_file():
             vars.files.append(entry)
-            
-            if isImage(entry.path):
-                    vars.images.append(entry)
-            elif isVideo(entry.path):
-                    vars.videos.append(entry)
-            elif isAudio(entry.path):
-                vars.audio.append(entry)
-            elif is_dot(entry.path):
-                vars.dot_files.append(entry)
+            process_file(entry) 
 
         if entry.is_symlink():
             vars.symbolic_links.append(entry)
@@ -107,7 +99,7 @@ def is_dot(path):
     if get_file_pre(path) == '.':
         return True
 
-def process_action(entry):
+def process_file(entry):
     """ Process action for file type """
 
     if isImage(entry.path):
