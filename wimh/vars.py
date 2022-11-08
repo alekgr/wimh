@@ -106,6 +106,53 @@ dot_directories = []
 dot_files = []
 
 
+#programming files
+
+#c/c files
+c_src = []              #.c
+c_header = []           #.h
+c_plus_src = []         #.cc
+c_plus_header = []      #.hh
+
+css_src = []
+
+java_src = []           #.java
+java_class = []         #.jar
+java_native_interface = [] #.jnI
+
+#python
+python_src = []         #.py
+python_bytecode = []    #.pyc
+
+#golang
+go_src = []             #.go
+
+#html_src
+html_src = []           #.html or htm
+
+#xhtml and xml
+xhtml_src = []          #.xhtml
+xml_src = []            #.xml
+
+
+#javascript
+javascript_src = []     #.hs
+
+#php
+php_src = []            #.php
+
+
+#perl
+perl_serc = []          #.pl or .PL
+
+#visual basic
+visual_basic_project = []    #.vbp
+visual_basic_form_module = [] #.frm
+visual_basic_standard_code_module = [] #.bas
+visual_basic_custom_controls = [] #.ocx
+visual_basic_project_form = [] #.vbw
+
+
 class sourceCode_info:
     def __init__(self): 
         self.c_src = 0 
