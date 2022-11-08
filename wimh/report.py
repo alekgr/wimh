@@ -16,6 +16,8 @@ def print_file_info():
         print(f"Number of Dot Directories {len(vars.dot_directories)} ")
         print(f"Number of C source files {len(vars.c_src)} ")
         print(f"Number of C header files {len(vars.c_header)} ")
+        print(f"Number of C++ source files {len(vars.c_plus_src)} ")
+        print(f"Number of C++ header files {len(vars.c_plus_header)} ")
 
     else:
             if vars.option_numberofdirectories == True:
@@ -40,3 +42,7 @@ def print_file_info():
                     print(f"Number of C Source files {len(vars.c_src)} ")
             if vars.option_c_header == True:
                     print(f"Number of C Header files {len(vars.c_header)} ")
+            if vars.option_c_plus_src == True:
+                    print(f"Number of C++ Source files {len(vars.c_plus_src)} ")
+            if vars.option_c_plus_header == True:
+                    print(f"Number of C++ header files {len(vars.c_plus_header)} ")

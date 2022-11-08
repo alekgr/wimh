@@ -111,6 +111,18 @@ def is_c_header(path):
     if getFileExtention(path) == ".h":
         return True
 
+def is_c_plus_src(path):
+    """ Checks if path file is a c++ source file """
+
+    if getFileExtention(path) ==  ".cc":
+        return True
+
+def is_c_plus_header(path):
+    """ Checks if path file is a c++ header files """
+
+    if getFileExtention(path) == ".hh":
+        return True
+
 def process_file(entry):
     """ Process action for file type """
 
@@ -126,3 +138,7 @@ def process_file(entry):
         vars.c_src.append(entry)
     elif is_c_header(entry.path):
         vars.c_header.append(entry)
+    elif is_c_plus_src(entry.path):
+        vars.c_plus_src.append(entry)
+    elif is_c_plus_header(entry.path):
+        vars.c_plus_header.append(entry)

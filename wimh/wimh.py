@@ -46,6 +46,10 @@ def main():
     parser.add_argument('--c_src_files', action='store_true', help="Report number of C source files")
     #add argument for --c_header_files
     parser.add_argument('--c_header_files', action='store_true', help="Report number of C header files")
+    #add argument for --cplus_src_files
+    parser.add_argument('--cplus_src_files', action='store_true', help="Report number of C++ source files")
+    #add argument for --cplus_header_files
+    parser.add_argument('--cplus_header_files', action='store_true', help="Report number of C++ header files")
 
     
     #setup parsers variables 
@@ -77,6 +81,10 @@ def main():
                 vars.option_c_src = True
             if args.c_header_files:
                 vars.option_c_header = True
+            if args.cplus_src_files:
+                vars.option_c_plus_src = True
+            if args.cplus_header_files:
+                vars.option_c_plus_header = True 
     
 
     #Create the config directory and log directories
@@ -97,6 +105,8 @@ def main():
     log.log_videos("videos")
     log.log_c_src("c_src_files")
     log.log_c_header("c_header_files")
+    log.log_c_plus_src("c++_src_files")
+    log.log_c_plus_header("c++_header_files")
      
 
 if __name__ == "__main__":
