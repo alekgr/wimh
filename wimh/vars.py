@@ -13,6 +13,8 @@ option_numberofdirectories = False
 option_numberoffiles = False
 option_numberofsyslinks = False
 option_emptydirs = False
+option_c_src = False
+option_c_header = False
 
 image_extension =  (
     ".tiff",

@@ -99,6 +99,18 @@ def is_dot(path):
     if get_file_pre(path) == '.':
         return True
 
+def is_c_src(path):
+    """ Checks if path file is a c source file """
+
+    if getFileExtention(path) == ".c":
+        return True    
+
+def is_c_header(path):
+    """ Checks if path file is a c header file """
+
+    if getFileExtention(path) == ".h":
+        return True
+
 def process_file(entry):
     """ Process action for file type """
 
@@ -110,3 +122,7 @@ def process_file(entry):
         vars.audio.append(entry)
     elif is_dot(entry.path):
         vars.dot_files.append(entry)
+    elif is_c_src(entry.path):
+        vars.c_src.append(entry)
+    elif is_c_header(entry.path):
+        vars.c_header.append(entry)

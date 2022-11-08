@@ -14,6 +14,8 @@ def print_file_info():
         print(f"Number of Audios {len(vars.audio)} ")
         print(f"Number of Dot Files {len(vars.dot_files)} ")
         print(f"Number of Dot Directories {len(vars.dot_directories)} ")
+        print(f"Number of C source files {len(vars.c_src)} ")
+        print(f"Number of C header files {len(vars.c_header)} ")
 
     else:
             if vars.option_numberofdirectories == True:
@@ -34,3 +36,7 @@ def print_file_info():
                     print(f"Number of Dot Files {len(vars.dot_files)} ")
             if vars.option_dotdirectories == True:
                     print(f"Number of Dot Directories {len(vars.dot_directories)} ")
+            if vars.option_c_src == True:
+                    print(f"Number of C Source files {len(vars.c_src)} ")
+            if vars.option_c_header == True:
+                    print(f"Number of C Header files {len(vars.c_header)} ")
