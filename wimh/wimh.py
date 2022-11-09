@@ -60,6 +60,10 @@ def main():
     parser.add_argument('--java_native_interface_files', action='store_true', help="Report number of Java native interface files")
     #add arguemnt for --css
     parser.add_argument('--css', action='store_true', help="Report number of css files")
+    #add argument for --python_src
+    parser.add_argument('--python_src', action='store_true', help="Report number of python source files")
+    #add argument for --python_bytecode
+    parser.add_argument('--python_bytecode', action='store_true', help="Report number of python bytecode files")
 
 
     
@@ -106,6 +110,10 @@ def main():
                 vars.option_java_native_interface = True
             if args.css:
                 vars.option_css = True
+            if args.python_src:
+                vars.option_python_src = True
+            if args.python_bytecode:
+                vars.option_python_bytecode = True
 
 
     #Create the config directory and log directories
@@ -133,6 +141,8 @@ def main():
     log.log_java_archive("Java_class_archive")
     log.log_java_native_interface("Java_native_interface")
     log.log_css("css")
+    log.log_python_src("Python_src")
+    log.log_python_bytecode("Python_bytecode")
      
 
 if __name__ == "__main__":

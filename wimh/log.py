@@ -255,3 +255,37 @@ def log_css(relative_path):
                 fp.write('\n')
         
         fp.close()
+
+def log_python_src(relative_path):
+        """
+            Logs the python source information
+            It use the relative path
+        """
+        
+        #get the absolute path 
+        global DEFAULT_FULL_LOG_DIR
+       
+        absolute_path = os.path.join(DEFAULT_FULL_LOG_DIR, relative_path)
+        with open(absolute_path, "w") as fp:
+            for entry in vars.python_src:
+                fp.write(entry.path)
+                fp.write('\n')
+        
+        fp.close()
+
+def log_python_bytecode(relative_path):
+        """
+            Logs the python bytecode information
+            It use the relative path
+        """
+        
+        #get the absolute path 
+        global DEFAULT_FULL_LOG_DIR
+       
+        absolute_path = os.path.join(DEFAULT_FULL_LOG_DIR, relative_path)
+        with open(absolute_path, "w") as fp:
+            for entry in vars.python_bytecode:
+                fp.write(entry.path)
+                fp.write('\n')
+        
+        fp.close()

@@ -23,6 +23,8 @@ def print_file_info():
         print(f"Number of Java archive  files {len(vars.java_archive)} ")
         print(f"Number of Java native interface files {len(vars.java_native_interface)} ")
         print(f"Number of css files {len(vars.css_src)} ")
+        print(f"Number of python source files {len(vars.python_src)} ")
+        print(f"Number of python bytecode files {len(vars.python_bytecode)} ")
 
     else:
             if vars.option_numberofdirectories == True:
@@ -61,3 +63,7 @@ def print_file_info():
                     print(f"Number of Java java native interface files {len(vars.java_native_interface)} ")
             if vars.option_css == True:
                     print(f"Number of css files {len(vars.css_src)} ")
+            if vars.option_python_src == True:
+                    print(f"Number of python source files {len(vars.python_src)} ")
+            if vars.option_python_bytecode == True:
+                    print(f"Number of python bytecode {len(vars.python_bytecode)} ")

@@ -153,6 +153,18 @@ def  is_css(path):
     if getFileExtention(path) == ".css":
         return True
 
+def is_python_src(path):
+    """ Checks if path file is a .py file """
+
+    if getFileExtention(path) == ".py":
+        return True
+
+def is_python_bytecode(path): 
+    """ Checks if pth files  is .pyc file """
+
+    if getFileExtention(path) == ".pyc":
+        return True
+
 def process_file(entry):
     """ Process action for file type """
 
@@ -182,3 +194,7 @@ def process_file(entry):
         vars.java_native_interface.append(entry)
     elif is_css(entry.path):
         vars.css_src.append(entry)
+    elif is_python_src(entry.path):
+        vars.python_src.append(entry)
+    elif is_python_bytecode(entry.path):
+        vars.python_bytecode.append(entry)
