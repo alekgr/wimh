@@ -17,6 +17,10 @@ option_c_src = False
 option_c_header = False
 option_c_plus_src = False
 option_c_plus_header = False
+option_java_src = False
+option_java_class = False
+option_java_archive = False
+option_java_native_interface = False
 
 image_extension =  (
     ".tiff",
@@ -121,8 +125,9 @@ c_plus_header = []      #.hh
 css_src = []
 
 java_src = []           #.java
-java_class = []         #.jar
-java_native_interface = [] #.jnI
+java_class = []         #.class
+java_archive = []       #.jar
+java_native_interface = [] #.jni
 
 #python
 python_src = []         #.py

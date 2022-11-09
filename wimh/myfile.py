@@ -123,6 +123,30 @@ def is_c_plus_header(path):
     if getFileExtention(path) == ".hh":
         return True
 
+def is_java_src(path):
+    """ Checks if path file is a .java source files """
+
+    if getFileExtention(path) == ".java":
+        return True
+
+def is_java_class(path):
+    """ Checks if path file is a java .class files """
+
+    if getFileExtention(path) == ".class":
+        return True
+
+def is_java_archive(path):
+    """ Checks if path file is .jar Java archive files """
+
+    if getFileExtention(path) == ".jar":
+        return True
+
+def  is_java_native_interface(path):
+    """ checks if path file is a .jni Java native interface file """
+
+    if getFileExtention(path) == ".jni":
+        return True
+
 def process_file(entry):
     """ Process action for file type """
 
@@ -142,3 +166,11 @@ def process_file(entry):
         vars.c_plus_src.append(entry)
     elif is_c_plus_header(entry.path):
         vars.c_plus_header.append(entry)
+    elif is_java_src(entry.path):
+        vars.java_src.append(entry)
+    elif is_java_class(entry.path):
+        vars.java_class.append(entry)
+    elif is_java_archive(entry.path):
+        vars.java_archive.append(entry)
+    elif is_java_native_interface(entry.path):
+        vars.java_native_interface.append(entry)

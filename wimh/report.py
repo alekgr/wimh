@@ -18,6 +18,10 @@ def print_file_info():
         print(f"Number of C header files {len(vars.c_header)} ")
         print(f"Number of C++ source files {len(vars.c_plus_src)} ")
         print(f"Number of C++ header files {len(vars.c_plus_header)} ")
+        print(f"Number of Java source files {len(vars.java_src)} ")
+        print(f"Number of Java class files {len(vars.java_class)} ")
+        print(f"Number of Java archive  files {len(vars.java_archive)} ")
+        print(f"Number of Java native interface files {len(vars.java_native_interface)} ")
 
     else:
             if vars.option_numberofdirectories == True:
@@ -46,3 +50,12 @@ def print_file_info():
                     print(f"Number of C++ Source files {len(vars.c_plus_src)} ")
             if vars.option_c_plus_header == True:
                     print(f"Number of C++ header files {len(vars.c_plus_header)} ")
+            if vars.option_java_src == True:
+                    print(f"Number of Java source files {len(vars.java_src)} ")
+            if vars.option_java_class == True:
+                    print(f"Number of Java class files {len(vars.java_class)} ")
+            if vars.option_java_archive == True:
+                    print(f"Number of Java archive files {len(vars.java_archive)} ")
+            if vars.option_java_native_interface == True:
+                    print(f"Number of Java java native interface files {len(vars.java_native_interface)} ")
+

@@ -170,3 +170,71 @@ def log_c_plus_header(relative_path):
                 fp.write('\n')
         
         fp.close() 
+
+def log_java_src(relative_path):
+        """
+            Logs the java source information
+            It use the relative path
+        """
+        
+        #get the absolute path 
+        global DEFAULT_FULL_LOG_DIR
+       
+        absolute_path = os.path.join(DEFAULT_FULL_LOG_DIR, relative_path)
+        with open(absolute_path, "w") as fp:
+            for entry in vars.java_src:
+                fp.write(entry.path)
+                fp.write('\n')
+        
+        fp.close() 
+
+def log_java_class(relative_path):
+        """
+            Logs the java class information
+            It use the relative path
+        """
+        
+        #get the absolute path 
+        global DEFAULT_FULL_LOG_DIR
+       
+        absolute_path = os.path.join(DEFAULT_FULL_LOG_DIR, relative_path)
+        with open(absolute_path, "w") as fp:
+            for entry in vars.java_class:
+                fp.write(entry.path)
+                fp.write('\n')
+        
+        fp.close() 
+
+def log_java_archive(relative_path):
+        """
+            Logs the java archive information
+            It use the relative path
+        """
+        
+        #get the absolute path 
+        global DEFAULT_FULL_LOG_DIR
+       
+        absolute_path = os.path.join(DEFAULT_FULL_LOG_DIR, relative_path)
+        with open(absolute_path, "w") as fp:
+            for entry in vars.java_archive:
+                fp.write(entry.path)
+                fp.write('\n')
+        
+        fp.close() 
+
+def log_java_native_interface(relative_path):
+        """
+            Logs the java native interface information
+            It use the relative path
+        """
+        
+        #get the absolute path 
+        global DEFAULT_FULL_LOG_DIR
+       
+        absolute_path = os.path.join(DEFAULT_FULL_LOG_DIR, relative_path)
+        with open(absolute_path, "w") as fp:
+            for entry in vars.java_native_interface:
+                fp.write(entry.path)
+                fp.write('\n')
+        
+        fp.close() 

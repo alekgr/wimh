@@ -50,6 +50,15 @@ def main():
     parser.add_argument('--cplus_src_files', action='store_true', help="Report number of C++ source files")
     #add argument for --cplus_header_files
     parser.add_argument('--cplus_header_files', action='store_true', help="Report number of C++ header files")
+    #add argument for --java_src_files
+    parser.add_argument('--java_src_files', action='store_true', help="Report number of Java source files")
+    #add argument for --java_class
+    parser.add_argument('--java_class_files', action='store_true', help="Report number of Java  class files")
+    #add argument for --java_archive
+    parser.add_argument('--java_archive_files', action='store_true', help="Report number of Java archive files")
+    #add argument for --java_native_interface
+    parser.add_argument('--java_native_interface_files', action='store_true', help="Report number of Java native interface files")
+
 
     
     #setup parsers variables 
@@ -84,8 +93,15 @@ def main():
             if args.cplus_src_files:
                 vars.option_c_plus_src = True
             if args.cplus_header_files:
-                vars.option_c_plus_header = True 
-    
+                vars.option_c_plus_header = True
+            if args.java_src_files:
+                vars.option_java_src = True
+            if args.java_class_files:
+                vars.option_java_class = True
+            if args.java_archive_files:
+                vars.option_java_archive = True
+            if args.java_native_interface_files:
+                vars.option_java_native_interface = True
 
     #Create the config directory and log directories
     config.create_config_dir()
@@ -107,6 +123,10 @@ def main():
     log.log_c_header("c_header_files")
     log.log_c_plus_src("c++_src_files")
     log.log_c_plus_header("c++_header_files")
+    log.log_java_src("Java_source_files")
+    log.log_java_class("Java_class_files")
+    log.log_java_archive("Java_class_archive")
+    log.log_java_native_interface("Java_native_interface")
      
 
 if __name__ == "__main__":
