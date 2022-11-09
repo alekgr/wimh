@@ -58,6 +58,8 @@ def main():
     parser.add_argument('--java_archive_files', action='store_true', help="Report number of Java archive files")
     #add argument for --java_native_interface
     parser.add_argument('--java_native_interface_files', action='store_true', help="Report number of Java native interface files")
+    #add arguemnt for --css
+    parser.add_argument('--css', action='store_true', help="Report number of css files")
 
 
     
@@ -102,6 +104,9 @@ def main():
                 vars.option_java_archive = True
             if args.java_native_interface_files:
                 vars.option_java_native_interface = True
+            if args.css:
+                vars.option_css = True
+
 
     #Create the config directory and log directories
     config.create_config_dir()
@@ -127,6 +132,7 @@ def main():
     log.log_java_class("Java_class_files")
     log.log_java_archive("Java_class_archive")
     log.log_java_native_interface("Java_native_interface")
+    log.log_css("css")
      
 
 if __name__ == "__main__":

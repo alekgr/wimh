@@ -147,6 +147,12 @@ def  is_java_native_interface(path):
     if getFileExtention(path) == ".jni":
         return True
 
+def  is_css(path):
+    """ Checks if path file is a .css file"""
+
+    if getFileExtention(path) == ".css":
+        return True
+
 def process_file(entry):
     """ Process action for file type """
 
@@ -174,3 +180,5 @@ def process_file(entry):
         vars.java_archive.append(entry)
     elif is_java_native_interface(entry.path):
         vars.java_native_interface.append(entry)
+    elif is_css(entry.path):
+        vars.css_src.append(entry)

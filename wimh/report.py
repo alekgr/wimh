@@ -22,6 +22,7 @@ def print_file_info():
         print(f"Number of Java class files {len(vars.java_class)} ")
         print(f"Number of Java archive  files {len(vars.java_archive)} ")
         print(f"Number of Java native interface files {len(vars.java_native_interface)} ")
+        print(f"Number of css files {len(vars.css_src)} ")
 
     else:
             if vars.option_numberofdirectories == True:
@@ -58,4 +59,5 @@ def print_file_info():
                     print(f"Number of Java archive files {len(vars.java_archive)} ")
             if vars.option_java_native_interface == True:
                     print(f"Number of Java java native interface files {len(vars.java_native_interface)} ")
-
+            if vars.option_css == True:
+                    print(f"Number of css files {len(vars.css_src)} ")

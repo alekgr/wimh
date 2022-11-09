@@ -21,6 +21,7 @@ option_java_src = False
 option_java_class = False
 option_java_archive = False
 option_java_native_interface = False
+option_css = False
 
 image_extension =  (
     ".tiff",
