@@ -24,6 +24,7 @@ option_java_native_interface = False
 option_css = False
 option_python_src = False
 option_python_bytecode = False
+option_go_src = False
 
 image_extension =  (
     ".tiff",

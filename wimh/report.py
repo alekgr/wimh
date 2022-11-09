@@ -25,6 +25,7 @@ def print_file_info():
         print(f"Number of css files {len(vars.css_src)} ")
         print(f"Number of python source files {len(vars.python_src)} ")
         print(f"Number of python bytecode files {len(vars.python_bytecode)} ")
+        print(f"Number of go source files {len(vars.go_src)} ")
 
     else:
             if vars.option_numberofdirectories == True:
@@ -67,3 +68,5 @@ def print_file_info():
                     print(f"Number of python source files {len(vars.python_src)} ")
             if vars.option_python_bytecode == True:
                     print(f"Number of python bytecode {len(vars.python_bytecode)} ")
+            if vars.option_go_src == True:
+                    print(f"Number of go source files {len(vars.go_src)} ")

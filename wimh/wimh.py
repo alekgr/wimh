@@ -64,6 +64,8 @@ def main():
     parser.add_argument('--python_src', action='store_true', help="Report number of python source files")
     #add argument for --python_bytecode
     parser.add_argument('--python_bytecode', action='store_true', help="Report number of python bytecode files")
+    #add argument for --go_src
+    parser.add_argument('--go_src', action='store_true', help="Report number of go source files")
 
 
     
@@ -114,6 +116,8 @@ def main():
                 vars.option_python_src = True
             if args.python_bytecode:
                 vars.option_python_bytecode = True
+            if args.go_src:
+                vars.option_go_src = True
 
 
     #Create the config directory and log directories
@@ -143,6 +147,7 @@ def main():
     log.log_css("css")
     log.log_python_src("Python_src")
     log.log_python_bytecode("Python_bytecode")
+    log.log_go_src("go_src")
      
 
 if __name__ == "__main__":

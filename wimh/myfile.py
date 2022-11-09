@@ -160,9 +160,15 @@ def is_python_src(path):
         return True
 
 def is_python_bytecode(path): 
-    """ Checks if pth files  is .pyc file """
+    """ Checks if path files  is .pyc file """
 
     if getFileExtention(path) == ".pyc":
+        return True
+
+def is_go_src(path):
+    """ Checks if path file is .go golang file """
+
+    if getFileExtention(path) == ".go":
         return True
 
 def process_file(entry):
@@ -198,3 +204,5 @@ def process_file(entry):
         vars.python_src.append(entry)
     elif is_python_bytecode(entry.path):
         vars.python_bytecode.append(entry)
+    elif is_go_src(entry.path):
+        vars.go_src.append(entry)

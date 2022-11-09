@@ -289,3 +289,20 @@ def log_python_bytecode(relative_path):
                 fp.write('\n')
         
         fp.close()
+
+def log_go_src(relative_path):
+        """
+            Logs go source information
+            It use the relative path
+        """
+        
+        #get the absolute path 
+        global DEFAULT_FULL_LOG_DIR
+       
+        absolute_path = os.path.join(DEFAULT_FULL_LOG_DIR, relative_path)
+        with open(absolute_path, "w") as fp:
+            for entry in vars.go_src:
+                fp.write(entry.path)
+                fp.write('\n')
+        
+        fp.close()
