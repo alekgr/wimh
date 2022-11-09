@@ -68,6 +68,8 @@ def main():
     parser.add_argument('--go_src', action='store_true', help="Report number of go source files")
     #add argument for --html_src
     parser.add_argument('--html_src', action='store_true', help="Report number of htm(l) source  files")
+    #add argument for --xml_src
+    parser.add_argument('--xml_src', action='store_true', help="Report number of xml source files")
 
 
     
@@ -122,6 +124,8 @@ def main():
                 vars.option_go_src = True
             if args.html_src:
                 vars.html_src = True
+            if args.xml_src:
+                vars.xml_src = True
 
 
     #Create the config directory and log directories
@@ -153,6 +157,7 @@ def main():
     log.log_python_bytecode("Python_bytecode")
     log.log_go_src("go_src")
     log.log_html_src("html_src")
+    log.log_xml_src("xml_src")
      
 
 if __name__ == "__main__":

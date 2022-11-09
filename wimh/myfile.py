@@ -177,6 +177,11 @@ def is_html_src(path):
     if getFileExtention(path) == ".html" or getFileExtention(path) == ".htm" or getFileExtention(path) == ".xhtml":
         return True
 
+def is_xml_src(path):
+    """ Checks if path file is a .xml file """
+
+    if getFileExtention(path) == ".xml":
+        return True    
 
 def process_file(entry):
     """ Process action for file type """
@@ -215,3 +220,5 @@ def process_file(entry):
         vars.go_src.append(entry)
     elif is_html_src(entry.path):
         vars.html_src.append(entry)
+    elif is_xml_src(entry.path):
+        vars.xml_src.append(entry)

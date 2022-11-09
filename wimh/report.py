@@ -27,6 +27,7 @@ def print_file_info():
         print(f"Number of python bytecode files {len(vars.python_bytecode)} ")
         print(f"Number of go source files {len(vars.go_src)} ")
         print(f"Number of htm(l) source files {len(vars.html_src)} ")
+        print(f"Number of xml source files {len(vars.xml_src)} ")
 
     else:
             if vars.option_numberofdirectories == True:
@@ -73,3 +74,5 @@ def print_file_info():
                     print(f"Number of go source files {len(vars.go_src)} ")
             if vars.option_go_src == True:
                     print(f"Number of html source files {len(vars.html_src)} ")
+            if vars.option_xml_src == True:
+                    print(f"Number of xml source files {len(vars.xml_src)} ")
