@@ -27,6 +27,7 @@ option_python_bytecode = False
 option_go_src = False
 option_html_src = False
 option_xml_src = False
+option_javascript_src = False
 
 image_extension =  (
     ".tiff",
@@ -150,7 +151,7 @@ xml_src = []            #.xml
 
 
 #javascript
-javascript_src = []     #.hs
+javascript_src = []     #.js
 
 #php
 php_src = []            #.php

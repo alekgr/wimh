@@ -70,6 +70,8 @@ def main():
     parser.add_argument('--html_src', action='store_true', help="Report number of htm(l) source  files")
     #add argument for --xml_src
     parser.add_argument('--xml_src', action='store_true', help="Report number of xml source files")
+    #add argument for --javascript_src
+    parser.add_argument('--javascript_src', action='store_true', help="Report number of javascript source files")
 
 
     
@@ -123,9 +125,11 @@ def main():
             if args.go_src:
                 vars.option_go_src = True
             if args.html_src:
-                vars.html_src = True
+                vars.option_html_src = True
             if args.xml_src:
-                vars.xml_src = True
+                vars.option_xml_src = True
+            if args.javascript_src:
+                vars.option_javascript_src = True
 
 
     #Create the config directory and log directories
@@ -158,6 +162,7 @@ def main():
     log.log_go_src("go_src")
     log.log_html_src("html_src")
     log.log_xml_src("xml_src")
+    log.log_javascript_src("javascript_src")
      
 
 if __name__ == "__main__":

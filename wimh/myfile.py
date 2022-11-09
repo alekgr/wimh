@@ -183,6 +183,12 @@ def is_xml_src(path):
     if getFileExtention(path) == ".xml":
         return True    
 
+def is_javascript_src(path):
+    """ Checks if path file is javascript file """
+
+    if getFileExtention(path) == ".js":
+        return True
+
 def process_file(entry):
     """ Process action for file type """
 
@@ -222,3 +228,5 @@ def process_file(entry):
         vars.html_src.append(entry)
     elif is_xml_src(entry.path):
         vars.xml_src.append(entry)
+    elif is_javascript_src(entry.path):
+        vars.javascript_src.append(entry)

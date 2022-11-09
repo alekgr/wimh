@@ -340,3 +340,20 @@ def log_xml_src(relative_path):
                 fp.write('\n')
         
         fp.close()
+
+def log_javascript_src(relative_path):
+        """
+            Logs javascript source information
+            It use the relative path
+        """
+        
+        #get the absolute path 
+        global DEFAULT_FULL_LOG_DIR
+       
+        absolute_path = os.path.join(DEFAULT_FULL_LOG_DIR, relative_path)
+        with open(absolute_path, "w") as fp:
+            for entry in vars.javascript_src:
+                fp.write(entry.path)
+                fp.write('\n')
+        
+        fp.close()
