@@ -306,3 +306,20 @@ def log_go_src(relative_path):
                 fp.write('\n')
         
         fp.close()
+
+def log_html_src(relative_path):
+        """
+            Logs htm(l) source information
+            It use the relative path
+        """
+        
+        #get the absolute path 
+        global DEFAULT_FULL_LOG_DIR
+       
+        absolute_path = os.path.join(DEFAULT_FULL_LOG_DIR, relative_path)
+        with open(absolute_path, "w") as fp:
+            for entry in vars.html_src:
+                fp.write(entry.path)
+                fp.write('\n')
+        
+        fp.close()

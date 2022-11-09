@@ -171,6 +171,13 @@ def is_go_src(path):
     if getFileExtention(path) == ".go":
         return True
 
+def is_html_src(path):
+    """ Checks if path file is .htm(l) file or xhtml """
+
+    if getFileExtention(path) == ".html" or getFileExtention(path) == ".htm" or getFileExtention(path) == ".xhtml":
+        return True
+
+
 def process_file(entry):
     """ Process action for file type """
 
@@ -206,3 +213,5 @@ def process_file(entry):
         vars.python_bytecode.append(entry)
     elif is_go_src(entry.path):
         vars.go_src.append(entry)
+    elif is_html_src(entry.path):
+        vars.html_src.append(entry)

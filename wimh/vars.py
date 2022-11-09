@@ -25,6 +25,7 @@ option_css = False
 option_python_src = False
 option_python_bytecode = False
 option_go_src = False
+option_html_src = False
 
 image_extension =  (
     ".tiff",
@@ -141,10 +142,9 @@ python_bytecode = []    #.pyc
 go_src = []             #.go
 
 #html_src
-html_src = []           #.html or htm
+html_src = []           #.html or htm or xhtml
 
-#xhtml and xml
-xhtml_src = []          #.xhtml
+#xml source
 xml_src = []            #.xml
 
 
