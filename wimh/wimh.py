@@ -101,6 +101,8 @@ def main():
                 vars.option_numberoffiles = True
             if args.symlinks:
                 vars.option_numberofsyslinks = True
+            if args.emptydirs:
+                vars.option_emptydirs = True
             if args.c_src_files:
                 vars.option_c_src = True
             if args.c_header_files:
