@@ -189,6 +189,16 @@ def is_javascript_src(path):
     if getFileExtention(path) == ".js":
         return True
 
+def is_php_src(path):
+    """ Checks if path file is a php file """
+
+    if  (getFileExtention(path) == ".php" or  
+        getFileExtention(path) == ".php3" or   
+        getFileExtention(path) == ".php4" or   
+        getFileExtention(path) == ".php5" or  
+        getFileExtention(path) == ".phtml") :
+            return True   
+
 def process_file(entry):
     """ Process action for file type """
 
@@ -230,3 +240,5 @@ def process_file(entry):
         vars.xml_src.append(entry)
     elif is_javascript_src(entry.path):
         vars.javascript_src.append(entry)
+    elif is_php_src(entry.path):
+        vars.php_src.append(entry)

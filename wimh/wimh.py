@@ -72,7 +72,8 @@ def main():
     parser.add_argument('--xml_src', action='store_true', help="Report number of xml source files")
     #add argument for --javascript_src
     parser.add_argument('--javascript_src', action='store_true', help="Report number of javascript source files")
-
+    #add argument for --php_src
+    parser.add_argument('--php_src', action='store_true', help="Report number of php source files")
 
     
     #setup parsers variables 
@@ -130,6 +131,8 @@ def main():
                 vars.option_xml_src = True
             if args.javascript_src:
                 vars.option_javascript_src = True
+            if args.php_src:
+                vars.option_php_src = True
 
 
     #Create the config directory and log directories
@@ -163,6 +166,7 @@ def main():
     log.log_html_src("html_src")
     log.log_xml_src("xml_src")
     log.log_javascript_src("javascript_src")
+    log.log_php_src("php_src")
      
 
 if __name__ == "__main__":

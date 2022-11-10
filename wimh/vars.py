@@ -28,6 +28,7 @@ option_go_src = False
 option_html_src = False
 option_xml_src = False
 option_javascript_src = False
+option_php_src = False
 
 image_extension =  (
     ".tiff",

@@ -29,6 +29,7 @@ def print_file_info():
         print(f"Number of htm(l) source files {len(vars.html_src)} ")
         print(f"Number of xml source files {len(vars.xml_src)} ")
         print(f"Number of javascript source files {len(vars.javascript_src)} ")
+        print(f"Number of php source files {len(vars.php_src)} ")
 
     else:
             if vars.option_numberofdirectories == True:
@@ -79,4 +80,5 @@ def print_file_info():
                     print(f"Number of xml source files {len(vars.xml_src)} ")
             if vars.option_javascript_src == True:
                     print(f"Number of javascript files {len(vars.javascript_src)} ")
-            
+            if vars.option_php_src == True:
+                    print(f"Number of php source files {len(vars.php_src)} ")
