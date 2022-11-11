@@ -150,27 +150,51 @@ def main():
     #log paths
     log.create_logs_dir()
     log.move_log_to_old()
-    log.log_directories("dirs")
-    log.log_empty_dirs("empty_dirs")
-    log.log_files("files")
-    log.log_images("images")
-    log.log_videos("videos")
-    log.log_c_src("c_src_files")
-    log.log_c_header("c_header_files")
-    log.log_c_plus_src("c++_src_files")
-    log.log_c_plus_header("c++_header_files")
-    log.log_java_src("Java_source_files")
-    log.log_java_class("Java_class_files")
-    log.log_java_archive("Java_class_archive")
-    log.log_java_native_interface("Java_native_interface")
-    log.log_css("css")
-    log.log_python_src("Python_src")
-    log.log_python_bytecode("Python_bytecode")
-    log.log_go_src("go_src")
-    log.log_html_src("html_src")
-    log.log_xml_src("xml_src")
-    log.log_javascript_src("javascript_src")
-    log.log_php_src("php_src")
+
+    if vars.option_directories == True or vars.option_all == True:
+        log.log_directories("dirs") 
+    if vars.option_emptydirs == True or vars.option_all == True:
+        log.log_empty_dirs("empty_dirs")
+    if vars.option_files == True or vars.option_all == True:
+        log.log_files("files")
+    if vars.option_images == True or vars.option_all == True:
+        log.log_images("images")
+    if vars.option_audios == True or vars.option_all == True:
+        log.log_audios("audios")
+    if vars.option_videos == True or vars.option_all == True:
+        log.log_videos("videos")
+    if vars.option_c_src == True or vars.option_all == True:
+        log.log_c_src("c_src_files")
+    if vars.option_c_header == True or vars.option_all == True:
+        log.log_c_header("c_header_files")
+    if vars.option_c_plus_src == True or vars.option_all == True:
+        log.log_c_plus_src("c++_src_files")
+    if vars.option_c_plus_header == True or vars.option_all == True:
+        log.log_c_plus_header("c++_header_files")
+    if vars.option_java_src == True or vars.option_all == True:
+        log.log_java_src("Java_source_files")
+    if vars.option_java_class == True or vars.option_all == True:
+        log.log_java_class("Java_class_files")
+    if vars.option_java_archive == True or vars.option_all == True:
+        log.log_java_archive("Java_class_archive")
+    if vars.option_java_native_interface == True or vars.option_all == True:
+        log.log_java_native_interface("Java_native_interface")
+    if vars.option_css == True or vars.option_all:
+        log.log_css("css")
+    if vars.option_python_src == True or vars.option_all == True:
+        log.log_python_src("Python_src")
+    if vars.option_python_bytecode == True or  vars.option_all == True:
+        log.log_python_bytecode("Python_bytecode")
+    if vars.option_go_src == True or vars.option_all == True:
+        log.log_go_src("go_src")
+    if vars.option_html_src == True or vars.option_all == True:
+        log.log_html_src("html_src")
+    if vars.option_xml_src == True or vars.option_all == True:
+        log.log_xml_src("xml_src")
+    if vars.option_javascript_src or vars.option_all == True:
+        log.log_javascript_src("javascript_src")
+    if vars.option_php_src == True or vars.option_all == True:
+        log.log_php_src("php_src")
      
 
 if __name__ == "__main__":
