@@ -113,6 +113,23 @@ def log_images(relative_path):
         
         fp.close()  
 
+def log_audios(relative_path):
+        """ 
+            Logs the audio files information
+            It use the relative path 
+        """
+        
+        #get the absolute path 
+        global DEFAULT_FULL_LOG_DIR
+       
+        absolute_path = os.path.join(DEFAULT_FULL_LOG_DIR, relative_path)
+        with open(absolute_path, "w") as fp:
+            for entry in vars.audio:
+                fp.write(entry.path)
+                fp.write('\n')
+        
+        fp.close() 
+
 def log_videos(relative_path):
         """ 
             Logs the image files information
