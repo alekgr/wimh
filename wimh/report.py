@@ -39,11 +39,11 @@ def print_file_info():
         print(f"\tNumber of php source files {len(vars.php_src)} ")
 
     else:
-            if vars.option_numberofdirectories == True:
+            if vars.option_directories == True:
                      print(f"Number of Directories: {len(vars.directories)} ");
-            if vars.option_numberoffiles == True:
+            if vars.option_files == True:
                     print(f"Number of Files {len(vars.files)}")
-            if vars.option_numberofsyslinks == True:
+            if vars.option_syslinks == True:
                     print(f"Number of Symbolic links {len(vars.symbolic_links)} ")
             if vars.option_emptydirs == True:
                     print(f"Number of Empty directories {len(vars.empty_dirs)} ")

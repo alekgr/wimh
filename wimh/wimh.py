@@ -96,11 +96,11 @@ def main():
             if args.dotdirs:
                 vars.option_dotdirectories = True
             if args.dirs:
-                vars.option_numberofdirectories = True
+                vars.option_directories = True
             if args.files:
-                vars.option_numberoffiles = True
+                vars.option_files = True
             if args.symlinks:
-                vars.option_numberofsyslinks = True
+                vars.option_syslinks = True
             if args.emptydirs:
                 vars.option_emptydirs = True
             if args.c_src_files:
