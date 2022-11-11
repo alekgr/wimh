@@ -148,6 +148,8 @@ def main():
     report.print_file_info()    
 
     #log paths
+    log.create_logs_dir()
+    log.move_log_to_old()
     log.log_directories("dirs")
     log.log_empty_dirs("empty_dirs")
     log.log_files("files")
