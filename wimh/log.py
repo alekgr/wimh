@@ -4,10 +4,13 @@
 import  os.path 
 import  vars
 import  os  
+import shutil
 import  config
 
 DEFAULT_LOG_DIR = "logs"
+DEFAULT_LOG_OLD = "old"
 DEFAULT_FULL_LOG_DIR = os.path.join(config.DEFAULT_CONFIG_WIMH_FULLPATH, DEFAULT_LOG_DIR) 
+DEFAULT_FULL_OLD_DIR = os.path.join(DEFAULT_FULL_LOG_DIR, DEFAULT_LOG_OLD)
 
 
 def create_logs_dir():
@@ -20,6 +23,30 @@ def create_logs_dir():
         if not os.path.exists(DEFAULT_FULL_LOG_DIR):
             os.makedirs(DEFAULT_FULL_LOG_DIR, vars.file_mode, exist_ok = True) 
 
+def create_old_dir():
+        """
+            Create  old directory to keep the old logs
+        """
+
+        global DEFAULT_FULL_OLD_DIR
+        
+        if not os.path.exists(DEFAULT_FULL_OLD_DIR):
+            os.mkdir(DEFAULT_FULL_OLD_DIR)
+
+def move_log_to_old():
+        """ 
+            Move old log files to the old directory 
+        """ 
+       
+        global DEFAULT_FULL_LOG_DIR
+
+        
+        files = [f for f in os.listdir(DEFAULT_FULL_LOG_DIR) if os.path.isfile(os.path.join(DEFAULT_FULL_LOG_DIR,f))]
+        for f in files:
+            source = os.path.join(DEFAULT_FULL_LOG_DIR, f)
+            destination = os.path.join(DEFAULT_FULL_OLD_DIR, f)
+            shutil.move(source, destination)
+       
 def log_directories(relative_path):
         """ 
             Logs the direcotiries information 
